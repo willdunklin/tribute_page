@@ -35,7 +35,7 @@ nav a:hover {
 nav i {
     vertical-align: text-top;
 }
-.splash-wrapper {
+.splash-wrapper-master {
   background-image: linear-gradient(var(--accent), var(--transparent));
 }
 .splash {
@@ -108,9 +108,8 @@ nav i {
 }
 .grid-item img {
   width: 20em;
-  border-radius: 10%;
   max-width: 30%;
-  /* min-width: 30%; */
+  min-width: 30%;
 }
 .grid-item p {
   padding: 0em 0.3em;
@@ -147,7 +146,8 @@ nav i {
     border-bottom: solid var(--line) 2px;
   }
   .grid-item img {
-    width: 50%;
+    min-height: 300px;
+    min-width: 201px;
   }
   .grid-container {
     grid-template-areas:
@@ -161,7 +161,7 @@ nav i {
   .blog2 {
     border-bottom: none;
   }
-  nav {
+  nav, footer {
     padding: 1em 5em;
   }
 }
