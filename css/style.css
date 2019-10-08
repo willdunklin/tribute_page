@@ -1,11 +1,12 @@
 :root{
-  /* declare variable */
+  --transparent: #00000000;
   --light: #faedee;
   --dark: #1d1e2c;
   --accent: #ddbdd5;
 }
 body {
   background-color: var(--light);
+  background-image: linear-gradient(to top right, var(--accent), var(--light), var(--light));
   font-family: 'Montserrat', sans-serif;
 }
 nav, footer {
@@ -28,9 +29,11 @@ nav a:hover {
   color: var(--accent);
 }
 /* image as background no-repeat padding */
+.splash-wrapper {
+  background-image: linear-gradient(var(--accent), var(--transparent));
+}
 .splash {
-  padding-top: 0.2em;
-  background-image: linear-gradient(var(--accent), var(--light));
+  /* padding-top: 0.2em; */
   display: flex;
   justify-content: center;
 }
@@ -40,14 +43,16 @@ nav a:hover {
   font-size: 25px;
 }
 .splash-img {
-  width: 40%;
-  transition: width 0.2s ease-out;
+  background-image: url("../img/alicia.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 34em;
+  transition: all 0.2s ease-out;
+  width: 37em;
 }
 .splash-img:hover {
-  width: 42%;
-}
-.splash-img:hover .splash-text {
-  color: var(--light);
+  background-size: 35em;
+  width: 38em;
 }
 #left-text {
   text-align: right;
@@ -59,14 +64,23 @@ nav a:hover {
   width: 12em;
 }
 
+.line {
+   display: flex;
+  justify-content: center;
+}
+.line hr {
+  width: 90%;
+  color: var(--dark);
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   padding: 0em 5em;
   grid-template-areas:
-  "a a c"
-  "b b e"
-  "d d e";
+  "image1 image1 image2"
+  "image3 blog1 blog1"
+  "image3 blog2 blog2";
   grid-gap: 0.3em;
 }
 .grid-container a {
@@ -78,41 +92,50 @@ nav a:hover {
   color: #ac9fbb;
 }
 .grid-item {
-  border: 2px solid var(--accent);
-  border-radius: 10px;
   padding: 1.8em;
-  font-size: 30px;
+  font-size: 25px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.3em;
+  /* border-image: linear-gradient(to bottom, transparent 15%, black 15%, black 85%, transparent 85%);
+  border-image-slice: 1;
+  border-image-width: 1px;
+  border-image-repeat: repeat; */
   align-items: center;
 }
 .grid-item img {
   width: 20em;
+  border-radius: 10%;
+  max-width: 30%;
+  /* min-width: 30%; */
 }
-.a {
-  color: var(--dark);
-  grid-area: a;
-  padding: 0.3em;
-}
-.a p {
+.grid-item p {
   padding: 0em 0.3em;
 }
-.b {
-  /* background-color: #59656f; */
+.image1 {
+  align-items: center;
   color: var(--dark);
-  grid-area: b;
+  grid-area: image1;
+  border-right: solid var(--dark) 2px;
 }
-.c {
+.blog1 {
+  color: var(--dark);
+  grid-area: blog1;
+}
+.image2 {
   /* background-color: #ac9fbb; */
   color: var(--dark);
-  grid-area: c;
+  grid-area: image2;
 }
-.d {
-  /* background-color: #ddbdd5; */
+.blog2 {
+  /* border-radius: 10px;
+  background-color: #1d1e2c08; */
   color: var(--dark);
-  grid-area: d;
+  grid-area: blog2;
 }
-.e {
-  color: #1d1e2c;
-  grid-area: e;
+.image3 {
+  color: var(--dark);
+  grid-area: image3;
+  border-right: solid var(--dark) 2px;
 }
