@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/mini_reset.css">
@@ -14,61 +14,61 @@
   </head>
   <body>
     <nav>
-      <a href="#"><p>Store <i class="material-icons">shopping_cart</i></p></a>
+      <a href="#store"><p>Store <i class="material-icons">shopping_cart</i></p></a>
       <a href="#art"><p>Art <i class="material-icons">palette</i></p></a>
-      <a href="#"><p>About <i class="material-icons">info</i></p></a>
+      <a href="#gallery"><p>Gallery <i class="material-icons">photo_library</i></p></a>
     </nav>
     <header>
       <div class="splash-wrapper-master">
         <div class="splash-wrapper">
           <div class="splash">
             <div class="splash-text" id="left-text">
-              <p>This is a sentence that is shorter</p>
+              <p>Paint,<br> Pen and Pencil</p>
             </div>
             <div class="splash-img">
               <a href="#art">
               </a>
             </div>
             <div class="splash-text" id="right-text">
-              <p>This is a sentence that is broken onto several lines</p>
+              <p>Art by<br>Beccah Dunklin</p>
             </div>
           </div>
         </div>
       </div>
     </header>
     <div class="line">
+      <!-- <div></div> -->
       <hr>
     </div>
     <div class="grid-container" id="art">
-      <div class="grid-item image1">
+      <section class="grid-item image1">
         <img src="img/awaken.png" alt="">
-        <p><b><i>Title (2018)</i></b><br>
+        <p><strong><i>Insight (2018)</i></strong><br>
           is based on the album art for
           <a href="https://en.wikipedia.org/wiki/%22Awaken,_My_Love!%22" target="_blank">"Awaken, My Love!"</a>
           by Donald Glover.</p>
-      </div>
-      <div class="grid-item blog1">
-        <p><b>Lorem ipsum</b><br> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At lectus urna duis convallis. Senectus et netus et malesuada fames. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Quis auctor elit sed vulputate.</p>
-      </div>
-      <div class="grid-item image2">
+      </section>
+      <section class="grid-item image2">
         <img src="img/sitting.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      </div>
-      <div class="grid-item blog2">
+        <p>As part of an exhibit at the School of the Art Institute of Chicago, this piece is a figure study painted on newspaper.</p>
+      </section>
+      <section class="grid-item image3">
+        <img src="img/kiss.png" alt="">
+        <p>Created using a just pen and a piece of paper, simplicity is often beautiful.</p>
+      </section>
+      <article class="grid-item blog1">
+        <p><strong>Beccah Dunklin</strong><br>is an aspiring young artist from Buffalo, NY. She attends Buffalo Seminary where she creates her artwork. She is highly involved in many mediums of art such as theater, digital and physical forms. She is currently producing <a href="#store">commissioned pieces</a> for customers while studying, growing and refining her skills.</p>
+      </article>
+      <article class="grid-item blog2">
         <p>
-          <b>List</b>
+          <strong>See More</strong>
         </p>
         <ul>
-          <li><i class="material-icons">navigate_next</i>Lorem ipsum</li>
-          <li><i class="material-icons">navigate_next</i>ipsum dolor sit amet</li>
-          <li><i class="material-icons">navigate_next</i>consectetur adipiscing elit</li>
-          <li><i class="material-icons">navigate_next</i>sed do eiusmod</li>
+          <li><i class="material-icons">navigate_next</i><a href="#store">Store</a></li>
+          <li><i class="material-icons">navigate_next</i><a href="#gallery">Digital Art Gallery</a></li>
+          <li><i class="material-icons">navigate_next</i><a href="#social">Social Media</a></li>
         </ul>
-      </div>
-      <div class="grid-item image3">
-        <img src="img/kiss.png" alt="">
-        <p>Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum.</p>
-      </div>
+      </article>
     </div>
     <footer>
       <p>&copy; 2019 Will Dunklin</p>
